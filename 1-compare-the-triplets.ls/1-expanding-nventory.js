@@ -20,11 +20,10 @@ const atTheOldToad = {
       const { name } = this.potions[i];
       if (potionName === name) {
         this.potions.splice(i, 1);
-        return
+        return `Potion ${potionName} has been removed!`;
       }
     }
-        return `Potion ${potionName} is not in inventory!`
-    
+    return `Potion ${potionName} is not in inventory!`;
   },
   updatePotionName(oldName, newName) {
     for (let i = 0; i < this.potions.length; i++) {
@@ -35,3 +34,5 @@ const atTheOldToad = {
     }
   },
 };
+console.log(atTheOldToad.removePotion("Dragon breath"));
+console.log(atTheOldToad.getPotions());
