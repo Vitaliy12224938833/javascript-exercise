@@ -1,6 +1,6 @@
 `use strick`;
 
-// FITST VERSION========================================================
+// FIRST VERSION========================================================
 function gradingStudents(grades) {
   const result = [];
   for (let i = 0; i < grades.length; i++) {
@@ -38,7 +38,7 @@ function gradingStudents(grades) {
 
 function gradingStudents(grades) {
   for (let i = 0; i < grades.length; i++) {
-    if (grades[i] % 5 >= 3 && grades[i] >= 38 && grades[i] % 5 !== 0) {
+    if (grades[i] % 5 >= 3 && grades[i] >= 38 ) {
       grades[i] = grades[i] + (5 - (grades[i] % 5));
     }
   }
