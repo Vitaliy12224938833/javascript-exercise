@@ -26,4 +26,4 @@ function timeConversion(s) {
   }
   return militaryTime;
 }
-console.log(timeConversion("02:40:22AM"));
+console.log(timeConversion("12:00:00PM"));
