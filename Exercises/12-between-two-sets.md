@@ -33,4 +33,4 @@ Second condition (factor of each element of array 'b')
 36 % 6 = 0
 36 % 12 = 0
 Code language: PHP (php)
-So you could find 2 such integers between two sets, and hence that is the answer.
+So you could find 2 such integers between two sets, and hence that is the answer.e

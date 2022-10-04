@@ -1,4 +1,5 @@
-"use strick";
+"use strict";
+
 function getTotalX(a, b) {
   let validCount = 0;
   const minEllB = Math.min(...b);
