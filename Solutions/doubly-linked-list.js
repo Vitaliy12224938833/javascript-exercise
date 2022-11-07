@@ -132,7 +132,7 @@ console.log(list.length); //.toEqual(2);
 list.append(11);
 console.log(list.removeAt(1)); //.toEqual(9);
 console.log(list.remove(9)); //.toEqual(undefined);
-console.log(list.removeAt(1)); //.toEqual(5);
+console.log(list.removeAt(0)); //.toEqual(5);
 console.log(list.removeAt(0)); //.toEqual(11);
 console.log(list.length); //.toEqual(0);
 
