@@ -5,7 +5,6 @@ class Node {
     this.next = null;
   }
 }
-
 class LinkedList {
   constructor() {
     this.head = null;
@@ -41,7 +40,7 @@ class LinkedList {
 
   insertAt(value, index) {
     if (index > this.length) {
-      throw new Error("Index too beag");
+      throw new Error(`index:${index} exceeds list length: ${this.length}`);
     }
     if (index === 0) this.prepend(value);
     if (index === this.length) this.append(value);
@@ -78,7 +77,7 @@ class LinkedList {
           node.next.prev = node.prev;
           node.prev.next = node.next;
           this.length--;
-          return;
+          return curr.value;
         }
       }
       curr = curr.next;
@@ -111,6 +110,7 @@ class LinkedList {
     this.length--;
     return head.value;
   }
+
   get(index) {
     let curr = this.head;
     for (let i = 0; curr && i < index; i++) {
@@ -132,7 +132,7 @@ console.log(list.length); //.toEqual(2);
 list.append(11);
 console.log(list.removeAt(1)); //.toEqual(9);
 console.log(list.remove(9)); //.toEqual(undefined);
-console.log(list.removeAt(0)); //.toEqual(5);
+console.log(list.removeAt(1)); //.toEqual(5);
 console.log(list.removeAt(0)); //.toEqual(11);
 console.log(list.length); //.toEqual(0);
 
