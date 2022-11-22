@@ -11,6 +11,7 @@ class MinHeap {
   size() {
     return this.length;
   }
+  
   add(value) {
     this.data[this.length] = value;
     this.heapifyUp(this.length);
@@ -79,22 +80,21 @@ const array = [
   859, 2848, 9309, 1449, 8408, 8041, 3367, 6676, 6382, 4136, 4871,
 ];
 
-function cookies(minV, array) {
+function cookies(minValue, array) {
   const heap = new MinHeap();
   heap.addArray(array);
   let counter = 0;
+
   while (heap.size() > 1) {
-    if (heap.peec() > minV) {
+    if (heap.peec() > minValue) {
       break;
     }
-    const fMin = heap.delete();
-    const sMin = heap.delete();
-    const sum = fMin + 2 * sMin;
 
-    heap.add(sum);
+    heap.add(heap.delete() + heap.delete() * 2);
     counter++;
   }
-  if (heap.peec() < minV) {
+
+  if (heap.peec() < minValue) {
     counter = -1;
   }
   return counter;
