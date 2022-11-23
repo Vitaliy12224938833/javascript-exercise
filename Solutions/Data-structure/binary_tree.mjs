@@ -118,18 +118,3 @@ class BineryTree {
     return node.left ? this.findMinValue(node.left) : node.value;
   }
 }
-
-const node = new BineryTree();
-node.add(23);
-node.add(3);
-node.add(223);
-node.add(32);
-node.add(2);
-node.add(4);
-node.add(243);
-node.add(43);
-node.add(26);
-node.revers();
-node.remove(32);
-node.remove(23);
-console.log(node.getRoot());
